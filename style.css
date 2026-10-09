@@ -1,0 +1,213 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#111;
+    color:white;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#c9a86a;
+}
+
+.hero{
+    height:100vh;
+    background:url('images/hero.jpg') center center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    text-align:center;
+    background:rgba(0,0,0,0.4);
+    padding:40px;
+    border-radius:15px;
+}
+
+.overlay h1{
+    font-size:70px;
+    font-weight:300;
+}
+
+.overlay p{
+    margin:15px 0;
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    border:1px solid white;
+    text-decoration:none;
+    color:white;
+    margin-top:15px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+    color:black;
+}
+
+section{
+    padding:100px 8%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+}
+
+.gallery{
+    column-count:3;
+    column-gap:15px;
+}
+
+.photo{
+    margin-bottom:15px;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+.photo img{
+    width:100%;
+    display:block;
+    transition:0.5s;
+    cursor:pointer;
+}
+
+.photo img:hover{
+    transform:scale(1.05);
+}
+
+.about{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+}
+
+.about p{
+    line-height:1.8;
+    font-size:18px;
+}
+
+.contact form{
+    max-width:600px;
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact input,
+.contact textarea{
+    padding:15px;
+    border:none;
+    border-radius:8px;
+}
+
+.contact button{
+    padding:15px;
+    border:none;
+    background:#c9a86a;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#000;
+}
+
+#lightbox{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.95);
+
+    justify-content:center;
+    align-items:center;
+}
+
+#lightbox img{
+    max-width:90%;
+    max-height:90%;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:40px;
+    font-size:40px;
+    cursor:pointer;
+}
+
+@media(max-width:900px){
+
+    .gallery{
+        column-count:2;
+    }
+
+    .overlay h1{
+        font-size:50px;
+    }
+}
+
+@media(max-width:600px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .gallery{
+        column-count:1;
+    }
+
+    .overlay h1{
+        font-size:40px;
+    }
+}
